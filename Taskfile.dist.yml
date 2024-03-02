@@ -1,0 +1,21 @@
+version: "3"
+
+env:
+  MY_UID:
+    sh: id -u
+  MY_GID:
+    sh: id -g
+
+vars:
+  DC_CONFIGS: -f docker-compose.dist.yml
+
+tasks:
+  # A little shortcut to make Docker Compose easier to work with
+  dc:
+    cmd: docker compose {{.DC_CONFIGS}} {{.CLI_ARGS}}
+
+  build:
+    cmd: docker compose {{.DC_CONFIGS}} run --rm --no-deps builder cargo build
+
+  run:
+    cmd: target/debug/simple

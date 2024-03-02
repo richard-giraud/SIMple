@@ -1,0 +1,8 @@
+services:
+  builder:
+    image: rust:bookworm
+    container_name: rust_builder
+    user: ${MY_UID}:${MY_GID}
+    working_dir: /app
+    volumes:
+      - ".:/app"
