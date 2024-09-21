@@ -1,7 +1,8 @@
+:- include('renderer').
+
 :- object(main).
     :- public(greet/0).
     greet :-
-      write("A tiny bit more here now...\n"),
-      halt.
-
+        renderer::render,
+        halt.
 :- end_object.
