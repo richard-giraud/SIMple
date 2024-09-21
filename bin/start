@@ -1,11 +1,12 @@
-#!/usr/bin/env swipl
+#!/usr/bin/env -S swilgt --quiet
 
 :- set_prolog_flag(verbose, silent).
 
-:- initialization main.
+:- initialization start_program.
 
-main :-
-  write("Not much here yet...\n"),
+start_program :-
+  logtalk_load('src/main'),
+  main::greet,
   halt.
 
-main :- halt(1).
+start_program :- halt(1).
