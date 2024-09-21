@@ -2,4 +2,4 @@
 
 apt-get update
 apt-get install -y swi-prolog
-dpkg -i dist/logtalk_3.82.0-1_all.deb
+dpkg -i deps/logtalk_3.82.0-1_all.deb
