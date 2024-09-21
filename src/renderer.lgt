@@ -16,7 +16,8 @@
         tty_size(Rows, Columns),
         AdjustedColumns is Columns - 5,
         AdjustedRows is Rows - 5,
-        loop_grid(AdjustedColumns, AdjustedRows).
+        loop_grid(AdjustedColumns, AdjustedRows),
+        write("\n").
 
     loop_grid(Columns, Rows) :-
         MaxRow is Rows - 1,
