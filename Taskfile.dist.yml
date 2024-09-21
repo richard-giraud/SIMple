@@ -1,5 +1,7 @@
 version: 3
 
 tasks:
+  install:
+    cmd: bin/install-deb
   start:
     cmd: bin/start

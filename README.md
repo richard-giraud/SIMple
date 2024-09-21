@@ -6,18 +6,25 @@ This is a simulation of people going about the wonderful (and sometimes weird) l
 
 You need the following software installed to run SIMple:
 
-* Linux (Debian-based distribution recommended but not required.)
-* BASH
-* SWI Prolog
+* Linux (Ubuntu or other Debian-based distribution recommended but not required.)
+* [BASH](https://www.gnu.org/software/bash/)
+* [SWI Prolog](https://www.swi-prolog.org/)
+* [Logtalk](https://logtalk.org/)
 
-### Install on Debian, Ubuntu, Mint, etc.
+### Install on Ubuntu (or Debian, Mint, etc.)
+
+It's assumed that you have BASH already, so this will install:
+
+* SWI Prolog from the distribution packages
+* Logtalk from the dist folder of this repository.
 
 ```bash
-# Update the list of available packages
-sudo apt-get update
-# Install packages
-sudo apt-get install swi-prolog
+sudo bin/install-deb
 ```
+
+### Install on other distributions
+
+You are on your own.  Check out the `bin/install-deb` folder and use its contents to guide you.
 
 ## Starting SIMple
 
