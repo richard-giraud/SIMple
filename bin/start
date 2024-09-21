@@ -1,0 +1,11 @@
+#!/usr/bin/env swipl
+
+:- set_prolog_flag(verbose, silent).
+
+:- initialization main.
+
+main :-
+  write("Not much here yet...\n"),
+  halt.
+
+main :- halt(1).
